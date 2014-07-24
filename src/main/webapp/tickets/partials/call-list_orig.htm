@@ -1,0 +1,87 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <!--<div class="span2">
+      Search: <input ng-model="query">
+    </div>-->
+    
+    <div class="span4"> 
+       <div class="row">
+        <div class="span4">
+          Inbound Calls
+          Dialed:{{calls.callsDialedInbound}}
+          Connected:{{calls.callsConnectedInbound}}
+        </div>
+		</div>
+       <div class="row">
+        <div class="span4">
+          Outbound Calls
+          Dialed:{{calls.callsDialedOutbound}}
+          Connected:{{calls.callsConnectedOutbound}}
+        </div>
+		</div>
+
+    </div>
+
+    <div class="span8">
+      <div class="row">
+        <div class="span8">
+          Calls In Queue
+          {{calls.callsInQueue}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="span8">
+          Average Talk Time
+          {{calls.averageTalkTime}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="span8">
+          Average Pick Up Time
+          {{calls.averagePickTime}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="span8">
+          Number of Agents
+        </div>
+      </div>
+    </div>
+
+    <div class="span12">
+      <!--Body content-->
+		<h3>Calls In Queue</h3>
+		<div class="gridStyle" ng-grid="queueCalls"></div>
+
+<!--		<table width="100%">
+			<tr><th>Skill Name</th><th>Caller</th></tr>
+		<tr ng-repeat="callInQueue in calls.callsInQueueList">
+			<td>{{callInQueue.skillName}}</td><td>{{callInQueue.caller}}</td>
+		</tr>
+		</table>-->
+
+		<h3>Agent Call Queue</h3>
+		<div class="gridStyle" ng-grid="agentQueueCalls"></div>
+<!--		<table width="100%">
+			<tr><th>Caller Id</th><th>Campaign Name</th><th>Skill Name</th><th>Agent</th><th>Date</th><th>Phone Name</th></tr>
+		<tr ng-repeat="agentCall in calls.agentCallQueue">
+			<td>{{agentCall.callerId}}</td><td>{{agentCall.campaignName}}</td><td>{{agentCall.skillName}}</td><td>{{agentCall.agent}}</td><td>{{agentCall.date}}</td><td>{{agentCall.phoneName}}</td>
+		</tr>
+		</table>
+-->
+
+
+		<h3>Abandoned Call List</h3>
+		<div class="gridStyle" ng-grid="abandonedCalls"></div>
+<!--
+		<table width="100%">
+			<tr><th>Skill Name</th><th>Skill Type</th><th>Caller</th><th>Time</th></tr>
+		<tr ng-repeat="abandonedCall in calls.abandonedCallList">
+			<td>{{abandonedCall.skillName}}</td><td>{{abandonedCall.skillType}}</td><td>{{agentCall.caller}}</td><td>{{agentCall.time}}</td>
+		</tr>
+		</table>
+-->	
+
+    </div>
+  </div>
+</div>

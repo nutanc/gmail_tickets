@@ -1,0 +1,16 @@
+{
+"totalCalls":"6",
+"callsLoved":"2",
+"callsLiked":"1",
+"callsDisliked":"3",
+"callsUnanswered":"0",
+"callsInQueue":"0",
+"callsInQueueList":[
+{"orderId":"1119","callerId":"9948651881","feedback":"DISLIKED","agentID":"Sudhakar","feedBackTime":"2013-07-13 09:40:33"},
+{"orderId":"1110","callerId":"9948651881","feedback":"LIKED","agentID":"Sudhakar","feedBackTime":"2013-07-13 07:09:24"},
+{"orderId":"11","callerId":"9000844590","feedback":"LOVED","agentID":"Satish","feedBackTime":"2013-07-15 10:40:25"},
+{"orderId":"541213","callerId":"9742496645","feedback":"LOVED","agentID":"Srinivas","feedBackTime":"2013-07-15 12:32:00"},
+{"orderId":"541212","callerId":"9742496645","feedback":"DISLIKED","agentID":"Srinivas","feedBackTime":"2013-07-15 13:06:33"},
+{"orderId":"1118","callerId":"9550621212","feedback":"DISLIKED","agentID":"Satish","feedBackTime":"2013-07-16 10:48:54"}
+]
+}

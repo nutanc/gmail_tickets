@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 text-center" style="position:relative;top:-60px">
+            <h2>Cloudagent Gmail Ticketing System</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-10">
+            <p class="text-primary">{{actionMessage}}</p>
+            <form name="myform">
+                <!-- Single button -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                        Send <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Send and set as pending</a></li>
+                        <li><a href="#">Send and set as closed</a></li>
+                        <li><a href="#">Send and set as resolved</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Send and set as waiting</a></li>
+                    </ul>
+                </div>
+                <button type="button" class="btn btn-primary" ng-click="setMessageLabel(ticket,'resolved')">Resolved</button>
+                <button type="button" class="btn btn-warning" ng-click="setMessageLabel(ticket,'pending')">Pending</button>
+                <button type="button" class="btn btn-info" ng-click="setMessageLabel(ticket,'closed')">Close</button>
+                <button type="button" class="btn btn-danger" ng-click="trashMessage(ticket)">Trash</button>
+                <textarea id="ticketMessage" name="ticketMessage" ui-tinymce="tinymceOptions" ng-model="ticketMessage"></textarea>
+            </form>
+        </div>
+    </div>
+</div>

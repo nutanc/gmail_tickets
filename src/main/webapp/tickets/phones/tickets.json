@@ -1,0 +1,12 @@
+{
+	"total":"5",
+	"closed":"2",
+	"open":"3",
+	"pending":"0",
+	"unassigned":"0",
+	"openTicketDetails":[
+	{"subject":"Big issue","from":"customer1","time":"12/04/14 12:05","snippet":"There was a huge downtime. This is a problem"},
+	{"subject":"Big issue1","from":"customer2","time":"12/04/14 12:05","snippet":"Loss of business is big. Please fix immediately"},
+	{"subject":"Big issue2","from":"customer2","time":"12/05/14 12:05","snippet":"How to upgrade the system"}
+	]
+}

@@ -1,0 +1,151 @@
+<div class="container-fluid">
+    <div class="navbar-inner clearfix">
+        <a class="navbar-brand" href="#">Survey Dashborad</a>
+    </div>
+    <hr/>
+    <div class="clearfix"></div>
+    <div class="row-fluid">
+                            <div class="span3 callstatus light_blue" title="Calls/Day">
+                                    <span class="data-label" style="">{{calls.totalCalls}}</span><br/> Feedbacks
+                            </div>
+                            <div class="span2 callstatus green" title="Loved Calls/Day">
+                                    <span class="data-label">{{calls.callsLoved}}</span><br/> Loved
+                            </div>
+                            <div class="span2 callstatus aqua" title="Liked Calls/Day">
+                                    <span class="data-label">{{calls.callsLiked}}</span><br/> Liked
+                            </div>
+                            <div class="span2 callstatus red" title="Disliked Calls/Day">
+                                    <span class="data-label">{{calls.callsDisliked}}</span><br/> Disliked
+                            </div>
+                            <div class="span2 callstatus red_orange" title="UnAnswered Calls/Day">
+                                    <span class="data-label">{{calls.callsUnanswered}}</span><br/> Unanswered
+                            </div>
+    </div>
+    <div class="clearfix"></div>
+<hr/>
+    <!--<div class="row-fluid">
+						<div class="span12">
+										<div class="circle">
+                                            <div class="outer-circle"></div>
+                                            <div class="middle-circle"></div>
+                                            <div class="inner-circle yellow">{{calls.totalCalls}}</div>
+                                            <div class="inner-circle-text">Feedbacks</div>
+                                        </div>
+                                        <div class="circle">
+                                            <div class="outer-circle"></div>
+                                            <div class="middle-circle"></div>
+                                            <div class="inner-circle red">{{calls.callsLiked}}</div>
+                                            <div class="inner-circle-text">Liked</div>
+                                        </div>
+                                        <div class="circle">
+                                            <div class="outer-circle"></div>
+                                            <div class="middle-circle"></div>
+                                            <div class="inner-circle green">{{calls.callsDisliked}}</div>
+                                            <div class="inner-circle-text">Disliked</div>
+                                        </div>
+                                        <div class="circle">
+                                            <div class="outer-circle"></div>
+                                            <div class="middle-circle"></div>
+                                            <div class="inner-circle orange">{{calls.callsLoved}}</div>
+                                            <div class="inner-circle-text">Loved</div>
+                                        </div>
+                                        <div class="circle">
+                                            <div class="outer-circle"></div>
+                                            <div class="middle-circle"></div>
+                                            <div class="inner-circle aqua">{{calls.callsUnanswered}}</div>
+                                            <div class="inner-circle-text">Unanswered</div>
+                                        </div>
+						</div>
+	</div>
+	-->
+                    <div class="row-fluid">
+                        <div class="span12" style="margin-left: 0">
+                            <div class="span6">
+                                <div class="panel">
+                                    <div class="panel-heading">Feedbacks</div>
+                                    <div class="panel-content">
+                                        <!--<div id="placeholder3" style="width:100%;height:280px" line-chart data="lineChartCallsPerHour"></div>-->
+                                        <!--Satish, add your code to show the table here-->
+                                        <!--<div class="gridStyle" ng-grid="queueCalls"></div>-->
+                                        <style>
+											select {width:80px;border: 1px solid #cccccc;background-color:#ffffff}
+                                        </style>
+                                        <div id="pivotHolder" style="margin: 30px;" pivot data="pivotData"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="span6"> 
+                                <div class="panel">
+                                    <div class="panel-heading">Feedback Ratio</div>
+                                    <div class="panel-content">
+                                        <div class="row-fluid">
+                                                
+                                                <div id="placeholder1" style="width:400px;height:300px" pie-chart data="pieChartInbound"></div>
+                                                <!--Dialed:{{calls.callSummaryList[0].TotalInbound}}<br/>
+                                                Connected:{{calls.callSummaryList[0].TotalInboundConnected}}-->
+                                                
+                    
+                                        </div>
+                                    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--<div class="row-fluid">
+						<div class="span12"> 
+						    <div id="pivotHolder" style="margin: 30px;" pivot data="pivotData"></div>
+						</div>
+					</div>-->
+					
+
+  <div class="gridster" gridster>
+    <ul>
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        
+                                    <div class="span3 callstatus light_blue" title="Calls/Day">
+                                    <span class="data-label" style="">{{calls.totalCalls}}</span><br/> Feedbacks
+                            </div>
+
+        </li>
+        <li data-row="2" data-col="1" data-sizex="1" data-sizey="1"></li>
+        <li data-row="3" data-col="1" data-sizex="1" data-sizey="1"></li>
+ 
+        <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">                            <div class="span2 callstatus green" title="Loved Calls/Day">
+                                    <span class="data-label">{{calls.callsLoved}}</span><br/> Loved
+                            </div>
+</li>
+        <li data-row="2" data-col="2" data-sizex="2" data-sizey="2"></li>
+ 
+        <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+                                    <div class="span2 callstatus aqua" title="Liked Calls/Day">
+                                    <span class="data-label">{{calls.callsLiked}}</span><br/> Liked
+                            </div>
+
+        
+        </li>
+        <li data-row="2" data-col="4" data-sizex="2" data-sizey="1"></li>
+        <li data-row="3" data-col="4" data-sizex="1" data-sizey="1"></li>
+ 
+        <li data-row="1" data-col="5" data-sizex="1" data-sizey="1">
+        
+                                    <div class="span2 callstatus red" title="Disliked Calls/Day">
+                                    <span class="data-label">{{calls.callsDisliked}}</span><br/> Disliked
+                            </div>
+</li>
+        <li data-row="3" data-col="5" data-sizex="1" data-sizey="1"></li>
+ 
+        <li data-row="1" data-col="6" data-sizex="1" data-sizey="1">
+                                    <div class="span2 callstatus red_orange" title="UnAnswered Calls/Day">
+                                    <span class="data-label">{{calls.callsUnanswered}}</span><br/> Unanswered
+                            </div>
+
+        
+        </li>
+        <li data-row="2" data-col="6" data-sizex="1" data-sizey="2"></li>
+    </ul>
+</div>
+
+
+
+</div>    

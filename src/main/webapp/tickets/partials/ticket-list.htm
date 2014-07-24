@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 text-center" style="position:relative;top:-60px">
+            <h2>Cloudagent Gmail Ticketing System</h2>
+        </div>
+        <div class="col-sm-3 col-md-2">
+            <div class="btn-group">
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-10">
+            <button type="button" class="btn btn-default" data-toggle="tooltip" title="Refresh" ng-click="refreshMessages()">
+                &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-refresh"></span>&nbsp;&nbsp;&nbsp;</button>
+            <div class="pull-right">
+                <span class="text-muted"><b>1</b>–<b>3</b> of <b>3</b></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 col-md-2">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="javascript:void(0)" ng-click="loadMessages('open')"><span class="badge pull-right">{{tickets.open}}</span> Open Tickets </a>
+                </li>
+                <li><a href="javascript:void(0)" ng-click="loadMessages('closed')"><span class="badge pull-right">{{tickets.closed}}</span>Closed</a></li>
+                <li><a href="javascript:void(0)" ng-click="loadMessages('pending')"><span class="badge pull-right">{{tickets.pending}}</span>Pending</a></li>
+                <li><a href="javascript:void(0)" ng-click="loadMessages('unassigned')"><span class="badge pull-right">{{tickets.unassigned}}</span>Unassigned</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-md-10">
+            <tabset>
+                <tab heading="{{label | capitalize}} Tickets">
+                    <table  class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>From</th><th>Subject</th><th>Details</th><th>Time</th><th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="ticket in tickets.openTicketDetails" ng-class="rowClass(ticket)">
+                                <td>{{ ticket.from }}</td>
+                                <td>{{ ticket.subject }}</td>
+                                <td>{{ ticket.snippet }}</td>
+                                <td>{{ ticket.date }}</td>
+                                <td><a class="btn btn-primary" href="#/tickets/{{ ticket.id}}" target="_blank">Open</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </tab>
+                <tab heading="Compose" select="alertMe()">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Compose Email
+                        </div>
+                        <div class="panel-body">
+                            <form>
+                                <p><input type="text" placeholder="To" style="width:95%"
+                                       ng-model="composeEmail.to"></p>
+                                <p><input type="text" placeholder="Subject" style="width:95%"
+                                       ng-model="composeEmail.subject"></p>
+                                <textarea style="width:95%;" rows="10" 
+                                          ng-model="composeEmail.body"></textarea>
+                            </form>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="#" class="btn" ng-click="closeComposePopup()">Close</a>
+                            <a href="#" class="btn btn-primary" ng-click="sendEmail()">Send</a>
+                        </div>
+                    </div>
+                </tab>
+            </tabset>
+        </div>
+    </div>
+
+</div>
